@@ -1,0 +1,206 @@
+# Notes for: Creating Desktop Icons & Apps
+# By sdk-ex
+
+# Part 1, How to Think About Apps
+
+ [What is a Desktop Executable]
+ I cant really speak for Windows as they may have a different system for this,
+ but at least when it comes to running apps on linux type systems you have a
+ very specific task for this. 
+
+ In order to run any application, there is a set command(s) for doing so, that
+ can either be entered into the terminal, or you can choose to graphically 
+ start the file executable by clicking on it. I wont get too far into the facts
+ at hand here as it is quite complex, but for the sake of helping you create 
+ any desktop app that is required, I will teach you how to do that.
+
+ Just know that at the back of everything going on, there are specific commands
+ that need to be entered. These can be represented and seen quite well in the 
+ terminal emulator, and that comes down to what exactly the windowing system is
+ for whichever system that you use. I wont go into that for the sake of helping
+ and not making it more confusing, but just know that there is an underlaying 
+ action going on behind the act of clicking on and running an item graphically.
+
+ Even Ubuntu itself has some abstractions that really make this easier, and we
+ will lean on them especially in this case where you just need to accomplish a
+ task and dont need to understand it.
+
+# Part 2, Structure of a Desktop App
+
+ [Note]
+ I will describe this process from the start to end without such a thing, but 
+ in reality you will have access to the same template that I use. It will make
+ you able to start at step 4, with all of the parameters or whatever you wanna
+ call them already set and ready for data.
+
+ [Step by Step Guide]
+ This is a quick rundown step by step. If there is anything I missed, or if 
+ something is not explained, dont be afraid to simply lookup how to make these
+ apps by hand online for linux/ubuntu. There is a lot of great info out there,
+ the creators and devs for this type of OS are top notch and will always have a
+ solution. But here is a quick guide:
+
+ (1) Create a new file, just a plain file. Name it with the extension set to
+ '.desktop', so if you are making the app for 'Krita' for example, it will be 
+ called 'Krita.desktop'. (Dont worry, the '.desktop' wont be visible.)
+
+ (2) Next you want to open the file with any text editor. You can use the one 
+ that comes with the system, if you are using the terminal 'nano' is the cmd
+ for the app with the same name that is the builtin terminal text editor. You
+ can also use 'pico' to open the same editor, as this is what it was called in
+ the days of 'Unix' (fun fact it was one of the original text editor period), 
+ and a more savvy user might use 'vi' as the text editor that is ergonomically
+ superior. I believe that 'vi' is THE original text editor for Unix as well.
+
+ (3) Once you have the file open, lets use VS-Codium as an example, you will
+ be able to add plaintext to it. Think of this '.desktop' file as a type of 
+ 'batch', or 'shell' file. A more experienced computer scientist may scoff at
+ this comparison cause its a bit more complicated than that, but in your case
+ that is an easy way to think about it.
+
+ Within this text file is a set of 'directives'. or parameters, variables, you
+ can call them what you like, they do have an official name but I will use the 
+ one that I prefer, which is directive.
+
+ The way that this works is that there is a set of directives that tell the app
+ how to behave when you click on it. There is a long list of directives that 
+ one might use, there are some that you HAVE to have but as a rule of thumb,
+ a good few of them are essentially 'optional'. I learned through trial and 
+ error myself, but I will save you the pain and show some of the main ones that
+ are used. They will be:
+---------------------------------------
+
+ - Name,
+ - Exec,
+ - Terminal,
+ - Type,
+ - StartupWMClass,
+ - Comment,
+ - Categorie,
+ - Icon,
+ ... etc
+ 
+---------------------------------------
+ Again these are the main ones necessary, you may even be able to live without
+ some, such as 'StartupWMClass', 'comment' of course, and 'icon' too if that is
+ how you choose. If you EVER want to know what other options there are, you can 
+ look it up OR what I like to do is simply open any other desktop app with a 
+ text editor by right clicking and selecting the option. This will expose you
+ to whatever the developers wanted to use, and you can use this to figure out
+ what you might want to include, especially if the app is similiar.
+
+ So at the top of each set of directives requires "[Desktop Entry]" just like
+ that, this can be used for complex actions but you at least need the one I put
+ there to execute this file as a desktop app. This is EXACTLY what how it looks
+ when you are ready to start entering data:
+---------------------------------------
+
+ [Desktop Entry]
+ Name=
+ Exec=
+ Terminal=
+ Type=
+ StartupWMClass=
+ Comment=
+ Categories=
+ Icon=
+ 
+---------------------------------------
+ Youll notice that these directives are all capitalized, unlike windows all of
+ the systems and files are case sensitive. So if something is not working when
+ it definitely should, make sure to check capitalization.
+
+ But there you have it, this is a '.desktop app' in its basic form. 
+  
+ (4) This next step is most important and ties it all together. That example in
+ the step right above is actually ripped directly from the template that I made
+ for myself, and now you, so although I provided info, this is where you will 
+ actually start in most cases.
+
+ We want to fill in the data, and I will go over each of them just to be extra 
+ clear about it. Its where the magic really happens, and it can be fun as well.
+
+ - Name: This is pretty standard, whatever you name this decides how the title 
+ is set for the app window. So in reality, it doesnt matter really what you put
+ here. It doesnt effect the files name aside from that.
+
+ - Exec: This one specifically is important. This is representative of how the
+ system will consume that application. So normally when you download & install
+ a new program, you end up placing its contents either in the systems /lib, or
+ /opt (which is what I suggest!), or really anywhere. IT DOES NOT MATTER WHERE,
+ AS LONG AS YOU KNOW ITS LOCATION YOU CAN CALL FROM ANYWHERE! Especially if its
+ on the path. There will be a note for that, so I wont go further in here, but
+ just know whatever command you use to run the app will be placed here, as it
+ prompts the execution in whatever fashion you set here. 
+ (note that env-variables & aliases are able to be used here!)
+
+ - Terminal: This one is a boolean, so its either 'true' or 'false'. When set 
+ to true, upon launching an app a terminal will be launched alongside it, then
+ provide whatever type of 'stacktrace' or active analysis that is set proir. 
+ Other than watching the app function in realtime, this serves no purpose and 
+ can generally be always set to 'false'.
+
+ - Type: There is probably a few different options for this particular option,
+ but you are probably gonna have it set to "Application" since thats the only 
+ thing we use it for here in this situation.
+
+ - StartupWMClass: This is a class that is used by the system, from what I have
+ seen you can interact with this class, but for the most part its name and even
+ maybe its inclusion here is inconsequential.
+
+ - Comment: This is what it sounds like, it pops up in the "properties" section
+ when you right click and choose that, maybe its in other places but it really
+ doesnt matter what you choose to put in this one.
+
+ - Categories: The option here is also kinda not a priority, I remember being 
+ semi pressed about this and then reading about how it only effects how your
+ OS organizes the apps in certain menu sections that I dont even use. So by all
+ means you may as well TRY to set it, but it dont matter. In our example of 
+ VS-Codium, the IDE, its 'Categories' are "Development; Java;". This is the 
+ only section that I am aware of whose line must end with a ";", or semi-colon.
+
+ - Icon: I find this one important, when you download an app for linux, within 
+ the files you will be able to quickly find a few different Icons precisely for
+ things like this. I find it fun to pick on. Whatever absolute path provided, 
+ as long as it points to some kind of image, this file will automatically set 
+ it and adjust it for scale.
+
+ That was a long and winded explanation, but unfortunately although it is quite
+ easy, there is a good bit to go over. After just one read or skim, you will be
+ able to quickly figure it out and even make small changes to adjust it. That
+ part is especially easy with testing these:
+ Click on the app. If it launches, then you are good. If not, needs adjusting.
+
+ [Example]
+ This is the 'Android Studio.desktop' file taken directly from my own computer,
+ that I made myself, that way you can see what I described directly:
+===============================================================================
+
+ [Desktop Entry]
+  Name=Android Studio
+  Exec=bash /usr/lib/android-studio/android-studio/bin/studio.sh
+  Terminal=false
+  Type=Application
+  StartupWMClass=AndroidStudio
+  Comment=Android Studio
+  Categories=Development;Java;
+  Icon=/usr/lib/android-studio/android-studio/bin/studio.png 
+
+===============================================================================
+ 
+ (5) The final step here is the easiest one of them all. When creating a new 
+ desktop app on Ubuntu, after you set this up with at least the most important
+ directives, right click on the icon, it should be located on the Desktop not 
+ if it wasnt before. Within that list that pops up when you right click, below
+ 'send to trash' there will be one that says "Allow Launching". You will see 
+ that the little red circle that is in the bottom righthand corner will be gone
+ and the application will be fully ready to be launched.
+
+# Part 3, Conclusion
+
+ I wont add any more to this cause it was really a doozy, but some stuff thats
+ good to remember is that you can create a template that lays out all of the 
+ directives, then you just need to fill them in and add any extras if they are
+ needed. Which usually, they are not. Enjoy, dont be afraid to look it up too.
+ The people who work on these platforms are awesome and super helpful.
+ 
