@@ -1,0 +1,87 @@
+# Notes for: Base GNU/Linux Filesystem Architecture and Function
+# By sdk-ex
+
+# Part 1, Welcome to the Linux Life
+
+ [Some Type of Familiar]
+ It is true, that a lot of what makes ubuntu nice for beginners can be summed 
+ as familiarity in a few ways. And really all that really means in a functional
+ sense, for a normie user, is that there is an emphasis on graphical components
+ that would resemble systems the average person in the 2020s would use.
+
+ There is believe it or not, a lot of merit to the things that are not so close
+ to home in Linux. I feel that its a small price to pay, as you are really just
+ using the computer in a way that it always was before, and likewise granted a 
+ level of control that modern consumers have been deprived of to the point of 
+ psychological manipulation by the companies pulling the strings.
+
+ That is not to be taken too literally, but hey, I am gonna bring that up. Sure
+ you could say that a lot of the major accusations are basically conjecture, on
+ the other hand though I would think most folks have a hard time arguing with 
+ this aspect here: You have more control over this system here.
+
+# Part 2, Lets Look at the System
+
+ Just below the 'home' directory which contains all of the basics that you use,
+ Desktop, Documents, Pictures, Videos, etc. you will find the base file system.
+ I wont get too into the nitty gritty here, but just know that unlike with your
+ Windows system, instead of random blobs or proprietary binary which does who
+ knows what entirely, things work a little different here.
+
+ As its famously free & open source (we all know Ubuntu dispute so ill ignore),
+ anything on this computer is described somewhere in documentation, nothing, in
+ its nature, is inaccessible. I wont get into the intricate differences in the 
+ two schemes entirely but one thing here I will make absolutely clear:
+ ANY configuration, link, associated data, or dependecy WILL be found in this
+ base filesystem. Pretty much EVERY, if not literally every, configuration is
+ able to be accessed and manipulated directly through shell script or plaintext
+ simply as is. So you really can make serious changes in your system using the
+ right text similiar to the '.desktop' concept. Its all here, well documented,
+ and celebrated. 
+
+ [Roll Call, What Do We Have Here?]
+ We are using Ubuntu of course, so thats what this will be based on. I will say
+ though, any related or derived systems if not any in general will all look 
+ pretty much the same. Off my head, Ill do a roll call and state their purpose:
+-------------------------------------------------------------------------------
+
+ - bin: 
+ Bin, being short for 'binary'(I believe, anyways) is a pretty standard dir you
+ will be able to see in absolutely ever system like this. This is where binary
+ files and even some executables are stored. Generally, you want to leave this
+ one alone for the most part. It contains a lot of the C and C++ binaries that
+ the system needs. 
+ 
+ - boot: 
+ This one is, as you can assume, where the boot data sits. Definitely dont even
+ touch this unless you have a good reason! And if you do, remember what you did
+ at least so I can fix it!
+ 
+ - dev:
+ Dev stands for device, and it seems to contain a bunch of binary or machine 
+ data that is important for your devices, for example things like USB detection
+ and interactions. Like most of these, you wanna avoid touching this unless you
+ have a good reason. Definitely dont delete anything here at least!
+ 
+ - etc:
+ Although this is a massive directory, and for the most part its the same deal
+ and you wont really touch it, this is the first one that I can promise you the
+ chances of having to access it are quite high. It contains a lot of the direct
+ configs, of which all are editable via text, in whatever formats they are seen
+ as. There is a few different formats.
+
+ The main reason I know you will need to access this is because the file called
+ etc/environment, which contains the environemnt variables. 
+ 
+ - home:
+ This is the directory that leads to the user. If you have mult
+ 
+ - lib:
+ - media:
+ - mount/mnt:
+ - opt:
+ - snap:
+ - sys:
+ - usr:
+-------------------------------------------------------------------------------
+ 
