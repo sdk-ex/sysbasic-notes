@@ -1,0 +1,238 @@
+# Note for Alt-Typeset: Using Hirigana IME Typographical Module
+# By sdk-ex, From github/esrille
+
+# Description 
+
+ Most of this is done with my experimentation, anything not created or found by
+ me can be attributed to the GitHub project owner user esrille, and his docs. 
+ This is a collection of observations and notes on how to actually use this 
+ keyboard. Especially since were using a std english keyboard, and theres a 
+ couple buttons that need to be mapped alternatively. Right now its difficult,
+ but by the end we will have a solid grasp on and be able to use the Japanese
+ keyboard fluently. The docs are not very in depth, so if looks like notes from
+ the article, it might be. Other than that my own info is fully integrated, we
+ make the priority conveying the info than nitpicking credit for this one.
+
+# Typing Japanese Characters
+
+ [Universal Keys That Are Missing From English Keyboards]
+ Theres some keys that come with Japanese keyboards, which we need to either
+ bind or ... actually I guess thats the only option. Some already are set, and
+ they did alright with it. 
+
+ The first and arguably most vital keys are the input mode keys. The first one
+ we use which is what allows us to type hirigana with syllabic inputs, and is
+ called the '英数', or 'alphanumeric-key'. There is also a full-width/half-width
+ keys too on Japanese keyboards, these keys work together. 
+
+ The input mode toggle key changes between alphanumeric mode and hirigana mode.
+ There are also respective keys that simply change the mode. Theres one for 
+ hirigana, alphanumeric, and katakana. The singular alphanumeric key, as in not
+ the multi-selector at the top, but the recently mentioned lone alphanumeric 
+ key, does two other things. 
+ 
+ This key is called '無変換', and when combined with 'shift' it produces output as
+ full width alphanumeric text. When its combined with 'ctrl' instead, it toggles 
+ between hirigana, katakana, and full width katakana modes. As opposed to the 
+ othe main toggle key, which only flips between alphanumeric and kana. Those 
+ are all the main buttons and differences between them.
+
+ The main toggle key mentioned at the very beginning, written as '英数', is 
+ pronounced as "e-i-su-u" syllabically. Its roughly pronounced in actual speech
+ as "ey(i)su", where the '(i)' is a very soft 'i', which is practically rolled
+ over. This is a common thing in japanese, but thats the best description of it
+ that I can offer for now.
+
+ There is another key that doesnt really do anything different, but becomes
+ important later. Its called '変換', which roughly means change/conversion, with
+ the kanji for "change" and "period/replace/convert. Note that this also means 
+ a "transformation", when used in the context of mathematics. But for us, it 
+ means the space bar. Thats exactly what it is. It changes words, at certain
+ intervals, so it makes sense. 
+
+ Pronounced as "henkan", or if you insist on using an english accent, you would
+ literally say "hin-kahn", with that flat 'ah' sound for the 'a'. If you are 
+ already familiar with Japanese syllables then its no problem, its easy for any
+ new speaker to pronounce in no time. Its spelled as 'へんかん', and written as
+ '変換', in the original Japanese. This key is not only a spacebar, but also can
+ perform other tasks for this style of keyboard. Which should be obvious, since 
+ there arent generally spaces in Japanese writing. So when its called a key for
+ 'periodic conversion', or 'periodic transformation', that could mean breaking
+ the character stream to create a new seperate word, or it could be another 
+ kind of conversion that would lead to a new word. More info below.
+
+ [Hirigana]
+ Although this is named "Hirigana IME", it actually supports all kana. They 
+ really should integrate this into GNOME, then the key layout named "Kana" will
+ actually be accurate instead of just being katakana, but I digress. Using the
+ keyboard with hirigana is simple once you know about the eisuu key. 
+
+ In the Hirigana IME package, the eisuu key is bound to caps lock, as well as 
+ the half and full width keys. This is not a problem, and a good workaround for
+ two reasons. The first is that there is no need for capitilization in Japanese
+ in general, except for a few keys which are only used sparingly and have a 
+ seperate solution. The other is the half/full width keys, but theres already a
+ different key for that too. Combining these into the caps lock doesnt effect
+ anything, since they can still be triggered. This is the only keybinding thats
+ set when you download the module though, so we will set some later. 
+
+ For now we focus on writing hirigana. The nice thing about the syllabic mode
+ is that if I know how to say something but no write it, we can type it out and
+ have it turn into hirigana easily. When the caps lock is active, it runs with
+ just the typing in real time, allowing me to not worry about pecking at the 
+ keyboard while staring at a layout chart(which didnt come with the module).
+
+ For example, if I were to type:`wowa nowa hachinich`, I can do so normally 
+ even while I am in Hirigana mode. I am writing all of this with it right now.
+ Then I hit caps-lock or the eisuu key and:`をわのわはちにち`, and it goes. 
+ This is pretty nice. 
+
+ [Kanji & This Module]
+ In this module(and possibly other Japanese keyboards, I wouldnt know), the key
+ for the spacebar or 'henkan' that was mentioned proir, works as a spacebar. 
+ But thats not its only function. In the japanese language, whitespace could 
+ theoretically be used for seperating words. Apparently its becoming more often
+ used, due to the internet and anglified typing standards. 
+
+ The Japanese language itself uses kanji instead of space, to help readers tell
+ different words apart. That might seem strange to many english only speakers,
+ but it actually does work really well. Its easy to pick apart sentences and 
+ quickly realize topics and actions, with a glance at the kanji. Its even 
+ possible to use this as a method of figuring out new words, since kanji do 
+ follow pretty consistent patters. 
+
+ But regardless, this is the main use of the spacebar key. Its functionally the
+ same as what we use the spacebar for in english typing, which is really smart.
+ In order to use it, we switch into Japanese mode and type some kanji for our
+ confirmation, a set of kanji which we are fluent with. 
+
+ For example, everyone knows this one:
+ We have 'watashi', or essentially "me" or "I". It doesnt imply ownership or 
+ "being of" until we add the 'wa' at the end. Which isnt included in the kani,
+ so were just using "watashi" for our example. Just so you dont get confused or
+ have to ask if "watashi" is a name or something. 
+
+ We can type the term わたし, just like that, and it will turn into hirigana if
+ the eisuu key(caps lock). To finish the word, in Japanese we would just keep
+ going. Or rather, after typing anything but words like no, wa, ni, ha, etc.,
+ when typing in japanese you then use the enter key to turn it into whichever 
+ kanji was intended and then move on.
+
+ This is how they do things normally. After all, kanji is meant for making the
+ language easier to read. Otherwise we would have a bunch of words that sound
+ very similiar, and have to use a ton of context. Here, we have a whole nother
+ category of context, and each kanji seperated can be viewed as each part of 
+ the sentence. Kind of like what we do with the spacebar in english, but were
+ seperating multiple words as concepts, rather than each word one by one.
+
+ Its all very natural, it feels easy to work with. So we type the word we want,
+ and it will be highlighted. We then press the spacebar, then everything thats
+ highlighted will be interpreted, and each kanji will popup as a dropdown. We
+ can assume they are listed in order of prevelance in the language, we can 
+ navigate with the 'up-arrow', 'down-arrow', or just the spacebar, then enter 
+ key when we have the right kanji under the cursor. If its a simple or common 
+ case, you can probably double-tap with some level of accuracy as well.
+
+ So back to watashi, or わたし:
+ わたし gets typed out, then we press the spacebar.
+ 私 is the only result, and that is definitely the correct kanji. 
+
+ Thats cool, but lets see another one thats more ambiguous. Lets say that I 
+ want to type the word 'ki', meaning "spirit" or "energy". Its a simple word,
+ that consequentially has several words associated, and could build many other
+ terms. Its easy to type, just 'k-i', to make the one kana 'き'. It can mean a
+ few different things, but either 'spirit' or 'tree' are two incredibly simple
+ and common compound words. I picked this word because of how this fact makes
+ it crystal clear why kanji is so important, and its the quickest, easily 
+ confused by widely recognized words I can think of.
+
+ So for typing ki:
+ き gets typed out, then we press the spacebar after.
+ There are many of them, so if we want to type "spirit", its the second one, 
+ just like we assumed. We can continue to press the spacebar to cycle through
+ the list(or use the error keys), and press enter on the right one. So we have:
+ き --> 気, which is the correct kanji. We can then move on.
+
+ Note that when we want to leave it as hirigana and continue typing, or if we 
+ are typing kana alongside english(other than pressing eisuu again), we cant 
+ use the spacebar of course. We instead just use the left-arrow or right-arrow
+ keys. Currently thats my main strategy, it does slow us down, but its the only
+ solution I know of. A japanese typer might have others, but again, there isnt 
+ a ton of spacing in japanese. Its just not needed.
+
+ Also keep in mind that your system does have a small amount of space dedicated
+ to history and word memory. So if you use a certain kanji more, it will show 
+ up higher in the list. Also this is a system setting, not a seperate app or 
+ some kind of keybinding wrapper. Those are clunky. All the work we did to 
+ integrate this into the system and use this particular module pays off, this
+ not only runs faster than others ive seen but the drop down is snappy and also
+ blends into the rest of the system ui. So when we are selecting kanji, we use
+ a GTK-4 style dropdown, placed onto/over the keyboard daemon I suppose.
+
+ And for the final note on this, in terms of fluent typing remember:
+ You can definitely press the spacebar, then instead of fussing with any arrow
+ keys, just continue to type kana. Its pretty fluid when you can do it quickly.
+ So you type, press the space and keep tapping until you land on the kanji you
+ need, then continue with the letter keys. Any other key seems to end the kanji
+ dropdown, so the letter keys definitely do. I suggest arrow keys in some of
+ those situations though, since it allows you to place the cursor while ending
+ the dropdown simulatneously. If that could help you, then by all means. 
+
+ [Converting Between Kana] 
+ There are certain qualities to typing words and sentences using this module.
+ When converting to kanji or katakana from the hirigana base, IME is designed
+ to collect words with the longest reading.
+
+ So is we use the example from the docs, when you enter the phrase:
+ わたしのいきがい論, initially when we press the space at the end it types:
+ わたしのいき概論 instead. This is an example of selecting the longer reading
+ with 概論 automatically, instead of the shorter 論, which can also be used.
+
+ Our module does this as a standard, and thats when a new key comes into play,
+ the 'tab' key. It hasnt been mentioned so far, but when we press tab, the 
+ program shortens the kanji if possible. It pulls a few different options, for
+ the example above note that I had to press tab twice to get the desired result
+ this time. 
+
+ If we keep pressing the tab key, it will be reduced back into kana. The next
+ time we use the same expression, it will appear at the beginning. Most of this
+ module actually follows that kind of behavior. 
+
+ We can do the same thing with words that are not in the dictionary, that are 
+ katakana. I havent tested it much, but a few sentences ago when I said that it
+ gets reduced to "kana", I mean that because I seen that I can turn it into 
+ katakana, without necessarily toggling to it. Althought, I havent practiced 
+ this feature at all past that point at this time. 
+
+ Apparently, we can get a similiar effect to this if we use the right-shift key
+ instead, or I should say it can be used as well. The docs say instead, but idk
+ if theres something im not getting here about it.
+
+ [Settings for Hirigana IME]
+ I usually use the actual settings menu, but it appears to be nonfunctional. At
+ least with my version of GNOME at the time, which is 42. Instead of this, we
+ see the selector at the top-right corner of the upper control bar. Clicking on
+ this will open our settings, instead of just showing which setting is being 
+ used. We can also use it to change the selected language, of course. 
+
+ We can even toggle our key toggle settings, hirigana, katakana, half/full 
+ width settings, and so on. There are some settings related to LLMs. It would
+ be assumed that normally, this is one of only very very few situations where 
+ an LLM might actually provide value. But its a black box, and I want there to
+ be set rules to which words and kana are converted in and out of what. But if
+ you want to use them, theyre available.
+
+ I havent seen the package, but its a CUDA based calculation system for one. 
+ If you dont know, thats a GPU language. So it will likely have an effect on 
+ GPU performance. I dont think thats worth the effort. 
+
+ [Final Thoughts]
+ Well go ahead and make this brief since its already a long ass document. There
+ are a few different alternative options here, including a personal dictionary,
+ list of keybindings, other settings, and frankly a ton of info about kana and 
+ romanji in this IME module.
+
+ There will eventually be other notes related to them, if deemed necessary. But
+ in any other case, just know they can be found linked within the other pages. 
+
+
